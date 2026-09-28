@@ -1,0 +1,237 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Kaushal Diwakar — Lead Video Editor & AI Video Specialist</title>
+  <meta name="description" content="Kaushal Diwakar is a Lead Video Editor and Senior AI Video Specialist in Gurgaon, India. Performance ads, brand films, motion graphics and AI video pipelines for national and international brands." />
+  <meta property="og:title" content="Kaushal Diwakar — Lead Video Editor & AI Video Specialist" />
+  <meta property="og:description" content="Ads, creator content and AI films that stop the scroll. 4+ years, 160+ videos, 40% faster with AI." />
+  <meta property="og:image" content="assets/og.jpg" />
+  <meta name="theme-color" content="#0a0a0b" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230a0a0b'/%3E%3Ccircle cx='16' cy='16' r='6' fill='%23ff3b2f'/%3E%3C/svg%3E" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,300;12..96,400;12..96,500;12..96,700;12..96,800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css?v=1" />
+  <script type="importmap">
+    { "imports": { "three": "https://cdn.jsdelivr.net/npm/three@0.169.0/build/three.module.js" } }
+  </script>
+</head>
+<body>
+  <!-- Loader: a timecode that counts up while the hero frames load -->
+  <div class="loader" aria-hidden="true">
+    <div class="loader__rec"><i></i>REC</div>
+    <div class="loader__tc" id="loader-tc">00:00:00:00</div>
+    <div class="loader__bar"><span id="loader-bar"></span></div>
+    <div class="loader__meta"><span>KD_PORTFOLIO_v26.prproj</span><span id="loader-pct">0%</span></div>
+  </div>
+
+  <div class="grain" aria-hidden="true"></div>
+  <div class="cursor" aria-hidden="true"><span class="cursor__label">Play</span></div>
+
+  <header class="nav">
+    <a href="#top" class="nav__logo" aria-label="Kaushal Diwakar, back to top"><b>KD</b><span>Kaushal Diwakar</span></a>
+    <nav class="nav__links" aria-label="Sections">
+      <a href="#work">Work</a>
+      <a href="#ai">AI</a>
+      <a href="#experience">Experience</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <div class="nav__status"><i></i>Available · Freelance &amp; Full-time</div>
+  </header>
+
+  <!-- Playhead: scroll position shown as a timecode -->
+  <div class="playhead" aria-hidden="true">
+    <span id="scroll-tc">00:00:00:00</span>
+    <div class="playhead__track"><span id="scroll-bar"></span></div>
+  </div>
+
+  <main id="top">
+    <!-- 01 HERO — camera flies through a tunnel of real frames -->
+    <section class="hero" id="hero">
+      <div class="hero__sticky">
+        <canvas id="scene" aria-hidden="true"></canvas>
+        <div class="hero__vignette"></div>
+
+        <div class="hero__stage hero__stage--intro">
+          <p class="eyebrow">Lead Video Editor · Senior AI Video Specialist · Motion Designer</p>
+          <h1 class="hero__name"><span data-scramble>Kaushal</span><span data-scramble>Diwakar</span></h1>
+          <div class="hero__meta">
+            <span>Gurgaon, India</span>
+            <span id="hero-clock">--:--:-- IST</span>
+            <span class="hero__scroll">Scroll to roll <i></i></span>
+          </div>
+        </div>
+
+        <div class="hero__stage hero__stage--line" aria-hidden="true">
+          <p class="hero__big"><span>Ads.</span> <span>Creator content.</span> <span>AI films.</span></p>
+        </div>
+
+        <div class="hero__stage hero__stage--stats" aria-hidden="true">
+          <p class="hero__big hero__big--sm">Cut for the scroll.<br/><em>Built to convert.</em></p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 02 ABOUT — words light up as you scroll -->
+    <section class="about" id="about">
+      <p class="label"><span>01</span> About</p>
+      <p class="about__text" data-words>I’m Kaushal, a Lead Video Editor and AI video specialist in Gurgaon. For 4+ years I’ve cut performance ads, brand films and creator content for national and international brands. Now I lead a team of five and build hybrid AI + NLE pipelines that ship work 40% faster without losing the cinematic finish.</p>
+
+      <ul class="stats">
+        <li><b data-count="4" data-suffix="+">0</b><span>Years in post-production</span></li>
+        <li><b data-count="160" data-suffix="+">0</b><span>Ads, campaigns &amp; creator videos</span></li>
+        <li><b data-count="40" data-suffix="%">0</b><span>Faster turnaround with AI pipelines</span></li>
+        <li><b data-count="30" data-suffix="+">0</b><span>Clients across India &amp; abroad</span></li>
+      </ul>
+    </section>
+
+    <!-- 03 SELECTED WORK — pinned horizontal reel -->
+    <section class="work" id="work">
+      <div class="work__pin">
+        <div class="work__head">
+          <p class="label"><span>02</span> Selected work</p>
+          <h2 class="h2">The reel.</h2>
+          <p class="work__hint">Click any frame to play · <span id="work-count">01 / 10</span></p>
+        </div>
+        <div class="work__track" id="work-track"></div>
+      </div>
+    </section>
+
+    <!-- 04 MORE CUTS — filterable grid -->
+    <section class="cuts" id="cuts">
+      <div class="cuts__head">
+        <p class="label"><span>03</span> More cuts</p>
+        <div class="chips" role="group" aria-label="Filter videos">
+          <button class="chip is-active" data-filter="all">All</button>
+          <button class="chip" data-filter="ad">Performance ads</button>
+          <button class="chip" data-filter="ai">AI video</button>
+          <button class="chip" data-filter="social">Social</button>
+        </div>
+      </div>
+      <div class="cuts__grid" id="cuts-grid"></div>
+    </section>
+
+    <!-- 05 AI — same script, two pipelines -->
+    <section class="ai" id="ai">
+      <p class="label"><span>04</span> AI × Editing</p>
+      <h2 class="h2">Same script.<br/>Two pipelines.</h2>
+      <p class="ai__lede">Both versions of this retail ad come from one script. One was cut the traditional way; the other went through my AI-augmented pipeline. Play them side by side.</p>
+
+      <div class="ai__compare">
+        <figure class="phone" data-video="1tFQrofgw8P5HYA_EQBR7SsGY4tWcCrNL">
+          <div class="phone__screen"><img src="assets/thumbs/rcu-noai.jpg" alt="Retail ad, traditional edit" loading="lazy" /><button class="phone__play" aria-label="Play the traditional edit"><i></i></button></div>
+          <figcaption><span class="tag">Without AI</span>Traditional edit</figcaption>
+        </figure>
+        <div class="ai__vs" aria-hidden="true">VS</div>
+        <figure class="phone" data-video="1I2qfGsz9D_wdPAHTFR1ZqjZyM3G05jdW">
+          <div class="phone__screen"><img src="assets/thumbs/rcu-ai.jpg" alt="Retail ad, AI-augmented edit" loading="lazy" /><button class="phone__play" aria-label="Play the AI-augmented edit"><i></i></button></div>
+          <figcaption><span class="tag tag--rec">With AI</span>AI-augmented pipeline</figcaption>
+        </figure>
+      </div>
+
+      <ol class="pipeline">
+        <svg class="pipeline__line" viewBox="0 0 100 2" preserveAspectRatio="none" aria-hidden="true"><line x1="0" y1="1" x2="100" y2="1" /></svg>
+        <li><b>01</b><h3>Script &amp; hooks</h3><p>Three-second hooks, pacing map, variant plan for testing.</p></li>
+        <li><b>02</b><h3>Generate</h3><p>Seedance 2.0, Kling, RunwayML, Google Omni for shots that were never filmed.</p></li>
+        <li><b>03</b><h3>Voice &amp; avatar</h3><p>ElevenLabs and HeyGen for voiceovers, dubs and presenters.</p></li>
+        <li><b>04</b><h3>Cut &amp; finish</h3><p>Premiere Pro and After Effects: edit, grade, motion, sound.</p></li>
+        <li><b>05</b><h3>Sign-off</h3><p>Frame-by-frame QC so AI shots hold up next to live footage.</p></li>
+      </ol>
+    </section>
+
+    <!-- 06 SERVICES -->
+    <section class="services" id="services">
+      <p class="label"><span>05</span> What I do</p>
+      <ul class="services__list">
+        <li><span class="services__n">01</span><h3>Performance ad creatives</h3><p>Hook-first edits for Meta, YouTube and Instagram, with fast variant testing to lift CTR and ROAS.</p></li>
+        <li><span class="services__n">02</span><h3>AI video production</h3><p>Generative shots, AI voice and avatars, merged into an NLE workflow so it still looks like film.</p></li>
+        <li><span class="services__n">03</span><h3>Motion graphics &amp; VFX</h3><p>2D/3D motion, title design, rotoscoping, keying and compositing in After Effects, Mocha and Blender.</p></li>
+        <li><span class="services__n">04</span><h3>Short-form &amp; creator content</h3><p>Reels, Shorts, YouTube long-form, podcasts and explainers that hold retention to the last frame.</p></li>
+        <li><span class="services__n">05</span><h3>Color, sound &amp; finishing</h3><p>Grading across mixed footage, sound design and mixing, and a master cut ready for delivery.</p></li>
+        <li><span class="services__n">06</span><h3>Team lead &amp; post pipelines</h3><p>Briefing, daily cut reviews, mentoring and final sign-off for a 5-person editing team.</p></li>
+      </ul>
+    </section>
+
+    <!-- 07 EXPERIENCE — an NLE timeline with a scroll-driven playhead -->
+    <section class="exp" id="experience">
+      <div class="exp__pin">
+        <div class="exp__top">
+          <div>
+            <p class="label"><span>06</span> Experience</p>
+            <h2 class="h2">The timeline.</h2>
+          </div>
+          <div class="monitor" aria-live="polite">
+            <div class="monitor__bar"><span>Program: <b id="mon-seq">Career_Master</b></span><span id="mon-tc">NOV 2022</span></div>
+            <div class="monitor__body">
+              <p class="monitor__role" id="mon-role"></p>
+              <p class="monitor__co" id="mon-co"></p>
+              <ul class="monitor__pts" id="mon-pts"></ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="nle" id="nle">
+          <div class="nle__ruler" id="nle-ruler"></div>
+          <div class="nle__tracks">
+            <div class="nle__track"><span class="nle__lbl">V1</span><div class="nle__lane" id="lane-v"></div></div>
+            <div class="nle__track"><span class="nle__lbl">A1</span><div class="nle__lane nle__lane--audio" id="lane-a"></div></div>
+            <div class="nle__track nle__track--sm"><span class="nle__lbl">EDU</span><div class="nle__lane" id="lane-e"></div></div>
+          </div>
+          <div class="nle__head" id="nle-head"><i></i></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 08 TOOLKIT marquee -->
+    <section class="tools" aria-label="Toolkit">
+      <div class="marquee"><div class="marquee__row">
+        <span>Premiere Pro</span><span>After Effects</span><span>Seedance 2.0</span><span>Kling</span><span>RunwayML</span><span>ElevenLabs</span><span>HeyGen</span><span>Photoshop</span><span>Illustrator</span><span>Audition</span>
+      </div></div>
+      <div class="marquee marquee--rev"><div class="marquee__row">
+        <span>Mocha AE</span><span>Blender</span><span>Topaz Video AI</span><span>Descript</span><span>Pika Labs</span><span>Google Omni</span><span>CapCut Pro</span><span>Color grading</span><span>Sound design</span><span>Rotoscoping</span>
+      </div></div>
+    </section>
+
+    <!-- 09 BEHANCE archive -->
+    <section class="archive" id="archive">
+      <div class="archive__head">
+        <p class="label"><span>07</span> Archive</p>
+        <a class="link-arrow" href="https://www.behance.net/Unknownartist03" target="_blank" rel="noopener">Full portfolio on Behance</a>
+      </div>
+      <div class="archive__grid" id="archive-grid"></div>
+    </section>
+
+    <!-- 10 CONTACT -->
+    <section class="contact" id="contact">
+      <p class="label"><span>08</span> Contact</p>
+      <h2 class="contact__title"><span>Got footage?</span><span>Let’s make it</span><span><em>stop the scroll.</em></span></h2>
+      <a class="contact__mail" href="mailto:Kaushaldiwa39@gmail.com"><span data-text="Kaushaldiwa39@gmail.com">Kaushaldiwa39@gmail.com</span></a>
+      <div class="contact__actions">
+        <a class="btn btn--solid" href="assets/Kaushal-Diwakar-Resume.pdf" download>Download resume</a>
+        <a class="btn" href="https://www.behance.net/Unknownartist03" target="_blank" rel="noopener">Behance</a>
+        <a class="btn" href="tel:+919773579254">+91 97735 79254</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <span>© 2026 Kaushal Diwakar</span>
+    <span id="foot-clock">Gurgaon --:--:-- IST</span>
+    <a href="#top">Back to top ↑</a>
+  </footer>
+
+  <!-- Player modal: Drive preview loads only when a video is opened -->
+  <div class="player" id="player" role="dialog" aria-modal="true" aria-label="Video player" hidden>
+    <button class="player__close" aria-label="Close video">Close ✕</button>
+    <div class="player__frame" id="player-frame"></div>
+    <p class="player__cap" id="player-cap"></p>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.13/dist/lenis.min.js"></script>
+  <script type="module" src="main.js?v=2"></script>
+</body>
+</html>
