@@ -135,6 +135,7 @@ section { position: relative; }
 .nav__links a { position: relative; }
 .nav__links a::after { content: ""; position: absolute; left: 0; right: 0; bottom: -3px; height: 1px; background: currentColor; transform: scaleX(0); transform-origin: right; transition: transform 0.5s var(--ease); }
 .nav__links a:hover::after { transform: scaleX(1); transform-origin: left; }
+.mnav { display: none; }
 .nav__status { display: flex; align-items: center; gap: 8px; font-family: var(--mono); font-size: 11px; letter-spacing: 0.06em; text-transform: uppercase; }
 .playhead {
   position: fixed; left: var(--gutter); bottom: 18px; z-index: 50;
@@ -367,6 +368,21 @@ section { position: relative; }
 /* ---------- responsive ---------- */
 @media (max-width: 900px) {
   .nav__links { display: none; }
+  .nav { height: 60px; padding-block: 0; }
+  .mnav {
+    position: fixed; top: 60px; left: 0; right: 0; z-index: 50;
+    display: grid; grid-template-columns: repeat(4, auto); justify-content: space-between;
+    height: 44px; padding: 0 var(--gutter); align-items: stretch;
+    background: var(--bg); border-block: 1px solid var(--line);
+  }
+  .mnav a {
+    position: relative; display: flex; align-items: center;
+    font-family: var(--mono); font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--dim);
+    transition: color 0.3s;
+  }
+  .mnav a::after { content: ""; position: absolute; left: 0; right: 0; bottom: -1px; height: 2px; background: var(--rec); transform: scaleX(0); transition: transform 0.4s var(--ease); }
+  .mnav a.is-active { color: var(--fg); }
+  .mnav a.is-active::after { transform: scaleX(1); }
   .stats { grid-template-columns: repeat(2, 1fr); }
   .stats li { padding: 24px 16px 24px 0; border-right: 0; border-bottom: 1px solid var(--line); }
   .stats li + li { padding-left: 0; }
@@ -380,7 +396,7 @@ section { position: relative; }
   .services__list p { grid-column: 2; }
   .exp__top { grid-template-columns: 1fr; gap: 16px; }
   .exp__top .h2 { font-size: clamp(40px, 11vw, 64px); }
-  .exp__pin { padding-top: 76px; padding-bottom: 56px; gap: 16px; }
+  .exp__pin { padding-top: 116px; padding-bottom: 56px; gap: 16px; }
   .monitor__body { min-height: 0; padding: 14px 16px; }
   .monitor__pts { font-size: 13px; }
   .monitor__pts li:nth-child(n+3) { display: none; }

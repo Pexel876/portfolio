@@ -431,6 +431,15 @@ ScrollTrigger.create({
   },
 });
 
+// Mobile section bar: underline the section in view
+$$('.mnav a').forEach((a) => {
+  const sec = $(a.getAttribute('href'));
+  ScrollTrigger.create({
+    trigger: sec, start: 'top 50%', end: 'bottom 50%',
+    onToggle: (s) => a.classList.toggle('is-active', s.isActive),
+  });
+});
+
 /* ------------------------------------------------------------------ */
 /* Filter chips                                                        */
 /* ------------------------------------------------------------------ */
