@@ -16,7 +16,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,300;12..96,400;12..96,500;12..96,700;12..96,800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="style.css?v=1" />
+  <link rel="stylesheet" href="style.css?v=2" />
   <script type="importmap">
     { "imports": { "three": "https://cdn.jsdelivr.net/npm/three@0.169.0/build/three.module.js" } }
   </script>
@@ -108,9 +108,8 @@
         <p class="label"><span>03</span> More cuts</p>
         <div class="chips" role="group" aria-label="Filter videos">
           <button class="chip is-active" data-filter="all">All</button>
-          <button class="chip" data-filter="ad">Performance ads</button>
-          <button class="chip" data-filter="ai">AI video</button>
-          <button class="chip" data-filter="social">Social</button>
+          <button class="chip" data-filter="ai">AI films</button>
+          <button class="chip" data-filter="social">Ads &amp; social</button>
         </div>
       </div>
       <div class="cuts__grid" id="cuts-grid"></div>
@@ -119,18 +118,21 @@
     <!-- 05 AI — same script, two pipelines -->
     <section class="ai" id="ai">
       <p class="label"><span>04</span> AI × Editing</p>
-      <h2 class="h2">Same script.<br/>Two pipelines.</h2>
-      <p class="ai__lede">Both versions of this retail ad come from one script. One was cut the traditional way; the other went through my AI-augmented pipeline. Play them side by side.</p>
+      <h2 class="h2">Never filmed.<br/>Still cinematic.</h2>
+      <p class="ai__lede">No camera, no set, no cast. These public-interest films were generated with AI video models, then cut, graded and sound-designed like any live-action ad. Tap to play.</p>
 
       <div class="ai__compare">
-        <figure class="phone" data-video="1tFQrofgw8P5HYA_EQBR7SsGY4tWcCrNL">
-          <div class="phone__screen"><img src="assets/thumbs/rcu-noai.jpg" alt="Retail ad, traditional edit" loading="lazy" /><button class="phone__play" aria-label="Play the traditional edit"><i></i></button></div>
-          <figcaption><span class="tag">Without AI</span>Traditional edit</figcaption>
-        </figure>
-        <div class="ai__vs" aria-hidden="true">VS</div>
         <figure class="phone" data-video="1I2qfGsz9D_wdPAHTFR1ZqjZyM3G05jdW">
-          <div class="phone__screen"><img src="assets/thumbs/rcu-ai.jpg" alt="Retail ad, AI-augmented edit" loading="lazy" /><button class="phone__play" aria-label="Play the AI-augmented edit"><i></i></button></div>
-          <figcaption><span class="tag tag--rec">With AI</span>AI-augmented pipeline</figcaption>
+          <div class="phone__screen"><img src="assets/thumbs/rcu-ai.jpg" alt="AI-generated retail story" loading="lazy" /><button class="phone__play" aria-label="Play the retail story"><i></i></button></div>
+          <figcaption><span class="tag tag--rec">AI film</span>Retail story</figcaption>
+        </figure>
+        <figure class="phone" data-video="1YCsCUaVhHq-Tu-JlIrN-qTTAy2ocWwv5">
+          <div class="phone__screen"><img src="assets/thumbs/char1.jpg" alt="AI 3D character film" loading="lazy" /><button class="phone__play" aria-label="Play the 3D character film"><i></i></button></div>
+          <figcaption><span class="tag tag--rec">AI animation</span>3D character</figcaption>
+        </figure>
+        <figure class="phone" data-video="1ukmPLmDseylK3aLeMjYeF_WcplrpYljB">
+          <div class="phone__screen"><img src="assets/thumbs/agr25.jpg" alt="AI-generated service ad" loading="lazy" /><button class="phone__play" aria-label="Play the service ad"><i></i></button></div>
+          <figcaption><span class="tag tag--rec">AI film</span>Service ad</figcaption>
         </figure>
       </div>
 
@@ -235,6 +237,6 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.13/dist/lenis.min.js"></script>
-  <script type="module" src="main.js?v=2"></script>
+  <script type="module" src="main.js?v=3"></script>
 </body>
 </html>

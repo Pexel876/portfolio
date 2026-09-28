@@ -24,22 +24,21 @@ const FEATURED = [
 ];
 
 const CUTS = [
-  { id: '1YIiRUJwFxWh0qNKAUzs4igUfsO_TYo_W', t: 'scapia5', title: 'Scapia · Script 5', cat: 'ad' },
-  { id: '1Wjqdjj7jGO9aqKxB90Rcmelg6Oo5LXgU', t: 'emi', title: 'EMI overdue? · With AI', cat: 'ai' },
-  { id: '1eLv3Yn5szenVVj2hOQ9tg8zVzCCCO_GP', t: 's11', title: 'Family finance story', cat: 'ad' },
+  { id: '1YIiRUJwFxWh0qNKAUzs4igUfsO_TYo_W', t: 'scapia5', title: 'Scapia · Script 5', cat: 'social' },
+  { id: '1Wjqdjj7jGO9aqKxB90Rcmelg6Oo5LXgU', t: 'emi', title: 'EMI overdue? Explainer', cat: 'ai' },
+  { id: '1eLv3Yn5szenVVj2hOQ9tg8zVzCCCO_GP', t: 's11', title: 'Family finance story', cat: 'ai' },
   { id: '1onM3YWzgn6MZDKb5Ji2TSS9gZiqxm6Hj', t: 'offer', title: 'Double offer promo', cat: 'social' },
   { id: '1hy2vA6W9yB5nCyMUsRXktyxn9tBr-QKD', t: 'refund', title: 'Refund fraud awareness', cat: 'social' },
   { id: '17euC7S6LF7I6dmInQGc5QRaokkRKiH7R', t: 'college', title: 'College PC tips', cat: 'social' },
   { id: '1CcFfw_3xGX4O_VoVOUWwR9lLnTgpeG6G', t: 'teaser', title: 'Brand motion teaser', cat: 'social' },
   { id: '1ckDb6IDCsDRREwL0onu_qxm4mXaeMUPF', t: 'char2', title: 'AI character · Ep 2', cat: 'ai' },
   { id: '1dzyqP_lRWRDdYCKT_5Sb_fr9kb_lSjwH', t: 'char3', title: 'AI character · Ep 3', cat: 'ai' },
-  { id: '1_9jagvDaMZMzIB5EcEwCczDD8wvqumLe', t: 'smbajaj', title: 'Bajaj · Social media cut', cat: 'ad' },
-  { id: '1StejyyspUcmlRiuVcKO6bJFvxXC9HbzP', t: 'ccr', title: 'CCR script 3b', cat: 'ad' },
-  { id: '1ukmPLmDseylK3aLeMjYeF_WcplrpYljB', t: 'agr25', title: 'Service ad · Script 25', cat: 'ad' },
-  { id: '1fcvvVVFuAa-T6UGYL39NsZxX55EDryQE', t: 'agr16', title: 'Service ad · Script 16', cat: 'ad' },
-  { id: '1tFQrofgw8P5HYA_EQBR7SsGY4tWcCrNL', t: 'rcu-noai', title: 'Retail story · Without AI', cat: 'ad' },
+  { id: '1_9jagvDaMZMzIB5EcEwCczDD8wvqumLe', t: 'smbajaj', title: 'At-home finance story', cat: 'ai' },
+  { id: '1StejyyspUcmlRiuVcKO6bJFvxXC9HbzP', t: 'ccr', title: 'Shopkeeper story', cat: 'ai' },
+  { id: '1ukmPLmDseylK3aLeMjYeF_WcplrpYljB', t: 'agr25', title: 'Service ad', cat: 'ai' },
+  { id: '1fcvvVVFuAa-T6UGYL39NsZxX55EDryQE', t: 'agr16', title: 'Work-from-home story', cat: 'ai' },
 ];
-const CAT_LABEL = { ad: 'Performance ad', ai: 'AI video', social: 'Social' };
+const CAT_LABEL = { ai: 'AI film', social: 'Ad · Social' };
 
 const BEHANCE = [
   ['perf', 'Video Editing & Performance Ads', '216011881/Video-Editing-Performance-marketing-ads'],
@@ -86,7 +85,7 @@ track.innerHTML = FEATURED.map((v, i) => `
       <div><div class="card__brand">${v.brand}</div><div class="card__title">${v.title}</div></div>
       <span class="card__cat">${v.cat}</span>
     </div>
-  </button>`).join('') + `<div class="card card--end"><p>14 more cuts<br/><em>just below ↓</em></p></div>`;
+  </button>`).join('') + `<div class="card card--end"><p>13 more cuts<br/><em>just below ↓</em></p></div>`;
 
 $('#cuts-grid').innerHTML = CUTS.map((v, i) => `
   <button class="cut" data-cut="${i}" data-cat="${v.cat}" data-cursor="play" aria-label="Play ${v.title}">
@@ -383,7 +382,7 @@ gsap.from('.contact__title span', {
   yPercent: 100, duration: 1.2, ease: 'expo.out', stagger: 0.1,
   scrollTrigger: { trigger: '.contact__title', start: 'top 80%', once: true },
 });
-gsap.from('.phone', { y: 80, opacity: 0, rotate: (i) => (i ? 4 : -4), duration: 1.3, ease: 'expo.out', stagger: 0.12, scrollTrigger: { trigger: '.ai__compare', start: 'top 80%', once: true } });
+gsap.from('.phone', { y: 80, opacity: 0, rotate: (i) => (i - 1) * 4, duration: 1.3, ease: 'expo.out', stagger: 0.12, scrollTrigger: { trigger: '.ai__compare', start: 'top 80%', once: true } });
 
 // AI pipeline line draws across the steps
 // (on narrow screens the steps stack, so the line runs vertically)
